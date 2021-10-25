@@ -1,0 +1,300 @@
+/*==RESET==*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+nav, ul{list-style: none;}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .9;
+}
+a:hover{opacity: 1;}
+/*FIM*/
+
+/*===HEADER=NAVBAR===*/
+.logo{
+    width: 18em;
+}
+
+
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+}
+
+header nav{display: flex;}
+
+header li a{color: #191c03;}
+
+header li {margin: 0 15px;}
+
+header li:first-child{margin-left: 0;}
+
+header li:last-child{margin-right: 0;}
+/*BREAKPOINT 1*/
+@media(max-width: 700px){
+    /*Quando o tamanho da tela for 700px, os itens ficaram em coluna*/
+    header{flex-direction: column;}
+    .logo{margin-bottom: 15px;}
+}
+
+/*==Section=PRINCIPAL==*/
+.hero{
+    background-image: url(../img/Background.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media(max-width: 780px){
+    /*Quando o tamanho da tela for 700px, use essa imagem*/
+    .hero{
+        background-image: url(../img/Background2.png)
+    }
+}
+
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero, .btn{
+    background-color: #fff;
+    border-radius: 4px;
+    color: #9fa097;
+    padding: 20px 50px;
+    text-transform: uppercase;
+}
+
+/*BREAKPOINT 2*/
+@media(max-width: 700px){
+    /*Quando o tamanho da tela for 700px, os itens ficaram em coluna*/
+    .hero h1{font-size: 1.5rem;}
+    .hero h3{font-size: 1rem;}
+}
+
+/*==CONHEÇA MEU TRABALHO==*/
+.conheca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+/*TEXTO DESSA SEÇÃO*/
+.conheca h3{ 
+    font-size: 2rem; 
+    margin-bottom: 35px; 
+    color: #191c03;
+    text-align: center;
+}
+.conheca p{ 
+    max-width: 800px; 
+    margin-bottom: 35px; 
+    color: #191c03; 
+    text-align: center;
+}
+.conheca hr{
+    width: 200px; 
+    height: 2px; 
+    background-color: #6d7532; 
+    margin-bottom: 70px; 
+    border: none;
+}
+
+/*FORMATANDO AS IMAGENS*/
+.conheca .grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conheca .grid li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.conheca .grid li.small{flex-basis: 40%;}
+.conheca .grid li.large{flex-basis: 60%;}
+
+/*BREAKPOINT 3-Imagens do GRID*/
+@media(max-width: 700px){
+    /*Quando o tamanho da tela for 780px, os itens ficaram em coluna*/
+    .conheca .grid li.small, 
+    .conheca .grid li.large{
+        flex-basis: 100%;
+    }
+}
+
+/*==SOBRE==*/
+.sobre{
+    background-color: #41419090;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.sobre h3{ 
+    font-size: 2rem; 
+    margin-bottom: 35px; 
+    color: #fff;
+    text-align: center;
+}
+.sobre p{ 
+    max-width: 800px; 
+    margin-bottom: 35px; 
+    color: #fff; 
+    text-align: center;
+}
+.sobre hr{
+    width: 200px; 
+    height: 2px; 
+    background-color: #6d7532; 
+    margin-bottom: 70px; 
+    border: none;
+}
+/*GRID da Seção SOBRE*/
+.sobre .grid{width: 100%; display: flex;}
+
+.sobre .grid li{padding: 0 30px; text-align: center;}
+
+.sobre .grid li i{
+    color: #c3c63b; 
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.sobre .grid li h4{
+    font-size: 1.5rem;
+    color: #c3c63b;
+    margin-bottom: 30px;
+}
+
+.sobre .grid li p{color: #fff;}
+/*BREAKPOINT 4-ITENS da Seção SOBRE*/
+@media(max-width: 850px){
+    /*Quando o tamanho da tela for 850px, os itens ficaram em coluna*/
+    .sobre .grid{
+        flex-direction: column;
+    }
+}
+
+/*==NEWSLETTER==*/
+.newsletter{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.newsletter h3{ 
+    font-size: 2rem; 
+    margin-bottom: 35px; 
+    color: #c3c63b;
+    text-align: center;
+}
+.newsletter p{ 
+    max-width: 800px; 
+    margin-bottom: 35px; 
+    color: #c3c63b; 
+    text-align: center;
+}
+.newsletter hr{
+    width: 200px; 
+    height: 2px; 
+    background-color: #6d7532; 
+    margin-bottom: 70px; 
+    border: none;
+}
+
+/*FORMULARIO*/
+.newsletter form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
+}
+
+.newsletter input{
+    padding: 15px;
+    border: 1px solid #c3c63b;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.newsletter button{
+    padding: 15px;
+    background-color: #c3c63b;
+    color: #191c03;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*BREAKPOINT 5-FORMULÁRIO*/
+@media(max-width: 780px){
+    /*Quando o tamanho da tela for 750px, os itens ficaram em coluna*/
+    .newsletter input{
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/*==FOOTER==*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #191c03;
+    padding: 50px 0;
+    align-items: center;
+}
+
+footer ul{display: flex; margin-bottom: 25px;}
+
+footer ul li{margin-right: 10px;}
+footer ul li:last-child{margin-right: 0px;}
+
+footer ul li a{color: #c3c63b; font-size: 2rem;}
+
+footer p{color: #c3c63b; text-align: center;}
+
+/*SCROLL*/
+::-webkit-scrollbar{
+    width: 12px;
+    border: 1px solid #c3c63b;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #c3c63b;
+    border-radius: 9px;
+}
